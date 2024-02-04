@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geometry Genius</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="bg-sky-200 p-6 rounded-xl flex justify-between items-center">
+      <div>
+        <h1 class="text-4xl font-bold text-gray-700 mb-2">Interactive</h1>
+        <p class="text-lg font-medium text-gray-600">Geometry Genius</p>
+      </div>
+      <div>
+        <button
+          class="bg-blue-600 font-bold text-lg text-white rounded-lg py-1 px-4"
+        >
+          Blog
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="mt-16 grid grid-cols-4 gap-8 w-[1320px] mx-auto">
+        <!-- 1st -->
+        <div
+          class="bg-purple-300 border rounded-lg border-gray-400 text-center p-3"
+        >
+          <img class="mx-auto m-5" src="images/triangle.png" alt="" />
+          <h1 class="text-2xl text-gray-700 font-bold mb-2">Triangle</h1>
+          <p class="text-base text-gray-600 font-medium mb-2">
+            Area (A) =<span>0.5 X b X h</span>
+          </p>
+
+          <input
+            id="baseInput"
+            class="w-20 rounded-md mb-2 py-1 px-2"
+            type="number"
+            placeholder="b"
+          />
+          <span class="text-base text-gray-600 font-medium">cm</span>
+          <input
+            id="heightInput"
+            class="w-20 rounded-md mb-8 py-1 px-2"
+            type="number"
+            placeholder="h"
+          />
+          <span class="text-base text-gray-600 font-medium">cm</span> <br />
+          <button
+            id="btn-calculater"
+            class="bg-blue-600 font-bold text-lg text-white rounded-lg py-1 px-4 mb-4"
+          >
+            Calculate
+          </button>
+        </div>
+
+        <!-- 2nd -->
+
+        <div
+          class="bg-indigo-300 border rounded-lg border-gray-400 text-center p-3"
+        >
+          <img class="mx-auto m-5" src="images/rectangle.png" alt="" />
+          <h1 class="text-2xl text-gray-700 font-bold mb-2">Rectangle</h1>
+          <p class="text-base text-gray-600 font-medium mb-2">
+            Area (A) = w X I
+          </p>
+          <input
+            id="width"
+            class="w-20 rounded-md mb-2 py-1 px-2"
+            type="number"
+            placeholder="w"
+          />
+          <span class="text-base text-gray-600 font-medium">cm</span>
+          <input
+            id="length"
+            class="w-20 rounded-md mb-8 py-1 px-2"
+            type="number"
+            placeholder="I"
+          />
+          <span class="text-base text-gray-600 font-medium">cm</span> <br />
+          <button
+            id="btn-calculater1"
+            class="bg-blue-600 font-bold text-lg text-white rounded-lg py-1 px-4 mb-4"
+          >
+            Calculate
+          </button>
+        </div>
+
+        <!-- 3rd -->
+
+        <div
+          class="bg-sky-300 border rounded-lg border-gray-400 text-center p-3"
+        >
+          <img class="mx-auto m-5" src="images/parallelogram.png" alt="" />
+          <h1 class="text-2xl text-gray-700 font-bold mb-2">Parallelogram</h1>
+          <p id="areas" class="text-base text-gray-600 font-medium mb-2">
+            Area (A) = b X h
+          </p>
+          <p class="text-xl text-gray-600 font-medium mb-9">b=10cm, h=12cm</p>
+          <button
+            id="btn-calculater2"
+            class="bg-blue-600 font-bold text-lg text-white rounded-lg py-1 px-4 mb-4"
+          >
+            Calculate
+          </button>
+        </div>
+
+        <!-- 4th -->
+
+        <div
+          class="text-center text-lg text-black font-bold bg-gray-100 rounded-lg p-4"
+        >
+          <h1>Area Calculation</h1>
+          <p class="text-base text-gray-600 font-medium mb-2">
+            1.Triangle = <span id="result">0.0</span> cm²
+          </p>
+          <p class="text-base text-gray-600 font-medium mb-2">
+            2.Rectangle = <span id="result2">0.0</span> cm²
+          </p>
+          <p class="text-base text-gray-600 font-medium mb-2">
+            3.Parallelogram = <span id="result3">0.0</span> cm²
+          </p>
+          <p class="text-base text-gray-600 font-medium mb-2">
+            4.Rhombus = <span id="result4">0.0</span> cm²
+          </p>
+          <p class="text-base text-gray-600 font-medium mb-2">
+            5.Pentagon = <span id="result5">0.0</span> cm²
+          </p>
+          <p class="text-base text-gray-600 font-medium mb-2">
+            6.Ellipse = <span id="result6">0.0</span> cm²
+          </p>
+        </div>
+
+        <!-- 5th -->
+
+        <div
+          class="bg-red-300 border rounded-lg border-gray-400 text-center p-3"
+        >
+          <img class="mx-auto m-5" src="images/rhombus.png" alt="" />
+          <h1 class="text-2xl text-gray-700 font-bold mb-2">Rhombus</h1>
+          <p class="text-base text-gray-600 font-medium mb-2">
+            Area (A) = <span>0.5 X d<sub>1</sub> X d<sub>2</sub></span>
+          </p>
+          <p class="text-xl text-gray-600 font-medium mb-9">b=10cm, h=12cm</p>
+          <button
+            id="btn-calculater3"
+            class="bg-blue-600 font-bold text-lg text-white rounded-lg py-1 px-4 mb-4"
+          >
+            Calculate
+          </button>
+        </div>
+
+        <!-- 6th -->
+
+        <div
+          class="bg-green-300 border rounded-lg border-gray-400 text-center p-3"
+        >
+          <img class="mx-auto m-5" src="images/pentagon.png" alt="" />
+          <h1 class="text-2xl text-gray-700 font-bold mb-2">Pentagon</h1>
+          <p class="text-base text-gray-600 font-medium mb-2">
+            Area (A) = 0.5 X p X b
+          </p>
+          <p class="text-xl text-gray-600 font-medium mb-9">
+            p = 6cm, b = 10cm
+          </p>
+          <button
+            id="btn-calculater4"
+            class="bg-blue-600 font-bold text-lg text-white rounded-lg py-1 px-4 mb-4"
+          >
+            Calculate
+          </button>
+        </div>
+
+        <!-- 7th -->
+
+        <div
+          class="bg-pink-300 border rounded-lg border-gray-400 text-center p-3"
+        >
+          <img class="mx-auto m-5" src="images/ellipse.png" alt="" />
+          <h1 class="text-2xl text-gray-700 font-bold mb-2">Ellipse</h1>
+          <p class="text-base text-gray-600 font-medium mb-2">
+            Area (A) = &Pi;ab
+          </p>
+          <p class="text-xl text-gray-600 font-medium mb-9">
+            a = 10cm, b = 4cm
+          </p>
+          <button
+            id="btn-calculater5"
+            class="bg-blue-600 font-bold text-lg text-white rounded-lg py-1 px-4 mb-4"
+          >
+            Calculate
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- JS -->
+    <script src="JS/calculate.js"></script>
+  </body>
+</html>
